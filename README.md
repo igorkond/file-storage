@@ -5,8 +5,8 @@ A web app for file storage
 A web app for file storage  
 
 # Installation
-git clone https://github.com/igorkond/file-storage
-cd file-storage
+git clone https://github.com/igorkond/file-storage  
+cd file-storage  
 npm install  
 npm run build  
 
