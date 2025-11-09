@@ -1,0 +1,19 @@
+{
+  "name": "file-storage",
+  "version": "1.0.0",
+  "description": "A service for storing and loading files",
+  "main": "./dist/server/index.js",
+  "scripts": {
+    "build:server": "tsc -p tsconfig.server.json",
+    "build:client": "tsc -p tsconfig.client.json",
+    "build": "npm run build:server && npm run build:client"
+  },
+  "keywords": [],
+  "author": "igorkond",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "typescript": "^5.9.3"
+  }
+}

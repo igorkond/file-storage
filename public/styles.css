@@ -1,0 +1,82 @@
+#file-tree ul {
+	list-style: none;
+	padding-left: 20px;
+}
+#file-tree {
+	list-style: none;
+	padding: 0;
+}
+.tree-node {
+	padding-top: 8px;
+}
+.flex {
+	display: flex;
+	align-items: stretch;
+}
+ul.flex {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+aside {
+	flex-shrink: 0;
+	padding: 10px;
+	border-right: 5px solid lightgray;
+}
+#toolbar {
+	background-color: lightgray;
+}
+main {
+	padding: 10px;
+}
+#tablist {
+	border-bottom: 2px solid blue;
+}
+#toolbar button {
+	border-width: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: lightgray;
+}
+#toolbar button:hover {
+	background-color: white;
+	cursor: pointer;
+}
+#toolbar button:active {
+	background-color: gray;
+}
+.tab {
+	padding: 10px;
+	border: 1px solid lightblue;
+}
+.tab:hover {
+	cursor: pointer;
+}
+.active-tab {
+	border-color: blue;
+}
+.file:hover {
+	cursor: pointer;
+}
+.folder {
+	position: relative;
+}
+.folder:hover {
+	cursor: pointer;
+}
+.tooltip {
+	z-index: 10;
+	pointer-events: none;
+	visibility: hidden;
+	position: absolute;
+	background-color: white;
+	border: 1px solid lightblue;
+	padding: 10px;
+	box-shadow: 0px 5px 5px -2px lightgray;
+}
+.arrow {
+	position: absolute;
+	top: 50%;
+	transform: translate(-8px, -50%);
+	font-size: 8px;
+}

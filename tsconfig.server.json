@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src/server",
+    "outDir":  "./dist/server",
+
+    "module": "nodenext",
+    "target": "esnext",
+
+    "types": ["node"],
+    "lib": ["esnext"],
+  },
+  "include": ["src/server/**/*"]
+}

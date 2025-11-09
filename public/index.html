@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Explorer</title>
+		<script src="/script.js" type="module"></script>
+		<link href="/styles.css" rel="stylesheet">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+		<nav id="toolbar">
+			<ul class="flex">
+				<li><button id="createFolder" type="button">Создать Папку</button></li>
+				<li><button id="deleteFolder" type="button">Удалить Папку</button></li>
+				<li><button id="uploadFile" type="button">Загрузить файл</button></li>
+				<li><button id="downloadFile" type="button">Скачать файл</button></li>
+				<li><button id="deleteFile" type="button">Удалить файл</button></li>
+				<li><button id="rename" type="button">Переименовать</button></li>
+			</ul>
+		</nav>
+		<div class="flex">
+			<aside>
+			<ul id="file-tree"></ul>
+			</aside>
+			<main id="main">
+				<nav id="tablist">
+					<ul id="tabs" class="flex"></ul>
+				</nav>
+			</main>
+		</div>
+		<dialog id="uploadFileDialog">
+		<form id="uploadFileForm" action="/api/entities/files" enctype="multipart/form-data" method="dialog">
+			<div>
+			<input type="hidden" id="folderIdInput" name="folderId" value="">
+			<label for="descriptionInput">Введите описание файла:</label>
+			<input type="text" id="descriptionInput" name="description" required/>
+			</div>
+			<br>
+			<div>
+			<label for="fileInput">Выберите файл:</label>
+			<input type="file" id="fileInput" name="file" required/>
+			</div>
+			<br>
+			<button type="submit" value="ok">Загрузить выбранный файл</button>
+			<button type="button" value="cancel" id="cancelButton">Отмена</button>
+		</form>
+		</dialog>
+	</body>
+</html>
