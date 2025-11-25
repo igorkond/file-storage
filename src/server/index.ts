@@ -35,7 +35,7 @@ const server = http.createServer(async function(request: InstanceType<typeof htt
 	response.setHeader('Cache-Control', 'no-store');
 	if(!request.url || !request.method){
 		response.writeHead(400, { 'Content-Type': 'text/plain' });
-		response.end('И url, и method запроса должны быть строками');
+		response.end('Ни url, ни method запроса не должны быть пустыми');
 		return;
 	}
 	const {href, pathname, searchParams} = new URL(request.url, baseUrl);
